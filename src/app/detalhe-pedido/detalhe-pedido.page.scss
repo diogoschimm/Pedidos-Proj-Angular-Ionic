@@ -1,0 +1,70 @@
+ion-content {
+    ion-card {
+      ion-card-content {
+        .dividir_cadastro {
+          margin-bottom: 20px;
+        }
+      }
+      ion-label.label{
+          display: block;
+      }
+      ion-label.label-dado{
+          display: block;
+      }
+      ion-label.h1 { 
+        color: darkgreen; 
+        font-size: 20px;
+        display: block; 
+        border-radius: 4px;
+        text-align: center;
+        margin: 10px 0;
+      }
+      ion-label.h2 { 
+        color: #9657ef; 
+        display: block;
+      }
+      .preenchido{
+        color: darkcyan
+      }
+      .itens{
+          min-height: 300px;
+      }
+      .btnSalvar {
+        text-align: center;
+      }
+      ion-item {
+        ion-button.home {
+          --border-color: #9657ef;
+          --background: #704fa0;
+          --border-style: solid;
+          text-transform: inherit;
+          width: 100%;
+          height: 75%;
+          --border-width: 1px;
+          --ripple-color: #ad82ec;
+        }
+        ion-button.editar {
+          --border-color: rgb(243, 255, 71);
+          --background: rgb(243, 255, 71);
+          --border-style: solid;
+          text-transform: inherit;
+          width: 100%;
+          height: 75%;
+          --border-width: 1px;
+          --ripple-color:  rgb(243, 255, 71);
+          color: #000000;
+        }
+        ion-button.deletar {
+          --border-color: #FF0000;
+          --background: #FF0000;
+          --border-style: solid;
+          text-transform: inherit;
+          width: 100%;
+          height: 75%;
+          --border-width: 1px;
+          --ripple-color: #FF0000;
+        }
+      }
+    }
+  }
+  

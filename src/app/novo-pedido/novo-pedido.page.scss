@@ -1,0 +1,45 @@
+ion-content {
+    ion-card {
+      ion-card-content {
+        .dividir_cadastro {
+          margin-bottom: 20px;
+        }
+      }
+      ion-label.h1 { 
+        color: #000; 
+        font-size: 16px;
+        display: block;
+        background: #dfcdf8;
+        padding: 5px 10px;
+        border-radius: 4px;
+        text-align: left;
+        margin: 10px 0;
+      }
+      ion-label.h2 { 
+        color: #9657ef; 
+        display: block;
+      }
+      .preenchido{
+        color: darkcyan
+      }
+      .itens{
+          min-height: 300px;
+      }
+      .btnSalvar {
+        text-align: center;
+      }
+      ion-item {
+        ion-button {
+          --border-color: #9657ef;
+          --background: #704fa0;
+          --border-style: solid;
+          text-transform: inherit;
+          width: 100%;
+          height: 75%;
+          --border-width: 1px;
+          --ripple-color: #ad82ec;
+        }
+      }
+    }
+  }
+  

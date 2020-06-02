@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Listagem de Pedidos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items"> 
+        <ion-grid>
+        <ion-row [routerDirection]="'root'" [routerLink]="item.url">
+            <ion-col size="2">
+              <div>
+                  <ion-icon [name]="item.icon" slot="start"></ion-icon>
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                  #{{item.pedido.id}}
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div>
+                  {{item.pedido.cliente.nome}}
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                  {{item.pedido.hora}} 
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>  
+    </ion-item>
+  </ion-list>
+</ion-content>

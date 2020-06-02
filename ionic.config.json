@@ -1,0 +1,7 @@
+{
+  "name": "PedidosProj",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

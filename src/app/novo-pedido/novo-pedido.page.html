@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{operacao}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-label class="h1">Cliente</ion-label>
+      <ion-label class="h2">Dados Pessoais</ion-label>
+      <ion-item>
+        <ion-label position="floating">Nome ou Razão</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.nome !=''}" type="text" placeholder="Nome do cliente aqui :)" [(ngModel)]="pedido.cliente.nome" name="nome"></ion-input>
+      </ion-item>
+      <ion-item class="dividir_cadastro">
+        <ion-label position="floating">CPF/CNPJ</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.documento !=''}" type="text" placeholder="cpf ou cnpj"  [(ngModel)]="pedido.cliente.documento" name="documento"></ion-input>
+      </ion-item>
+      <ion-label class="h2">Contato</ion-label>
+      <ion-item>
+        <ion-label position="floating">Celular</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.telefone !=''}" type="tel" placeholder="(##) #.####-####" [(ngModel)]="pedido.cliente.telefone" name="telefone"></ion-input>
+      </ion-item>
+      <ion-item class="dividir_cadastro">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.email !=''}" type="email" placeholder="email@email.com.br" [(ngModel)]="pedido.cliente.email" name="email"></ion-input>
+      </ion-item>
+      <ion-label class="h2">Endereço</ion-label>
+      <ion-item>
+        <ion-label position="floating">CEP</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.cep !=''}" type="number" placeholder="00000-000" [(ngModel)]="pedido.cliente.cep" name="cep"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Endereço do Cliente</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.endereco !=''}" type="text" placeholder="Endereço do Cliente" [(ngModel)]="pedido.cliente.endereco" name="endereco"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Número do Endereço</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.numero !=''}" type="text" placeholder="Qual o número do endereço?"  [(ngModel)]="pedido.cliente.numero" name="numero"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Bairro</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.bairro !=''}" type="text" placeholder="Onde é o bairro?" [(ngModel)]="pedido.cliente.bairro" name="bairro"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">UF</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.uf !=''}" type="text" placeholder="A cidade fica em qual estado?"  [(ngModel)]="pedido.cliente.uf" name="uf"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Cidade</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.cliente.cidade !=''}" type="text" placeholder="O endereço é em qual cidade?"  [(ngModel)]="pedido.cliente.cidade" name="cidade"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Complemento</ion-label>
+        <ion-textarea [ngClass]="{'preenchido':pedido.cliente.complemento !=''}" placeholder="Informe para ficar mas fácil para a localização ;)"  [(ngModel)]="pedido.cliente.complemento" name="complemento"></ion-textarea>
+      </ion-item>
+      
+      <ion-label class="h1">Itens do Pedido</ion-label>
+      <ion-item>
+        <ion-label position="floating">Descreva os itens</ion-label>
+        <ion-textarea [ngClass]="{'preenchido':pedido.itens !=''}" placeholder="Descreva aqui os itens que o cliente comprou" class="itens"  [(ngModel)]="pedido.itens" name="itens"></ion-textarea>
+      </ion-item>
+      <ion-label class="h1">Valor e Forma de Pagamento</ion-label>
+      <ion-item>
+        <ion-label position="floating">Valor Total</ion-label>
+        <ion-input [ngClass]="{'preenchido':pedido.valor}" type="number" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" [(ngModel)]="pedido.valor" name="valor" placeholder="0.00"></ion-input>
+      </ion-item>  
+      <!-- <ion-item> 
+          <ion-list radio-group [(ngModel)]="pedido.formaPagamento">
+          <ion-item>
+            <ion-label>Dinheiro</ion-label>
+            <ion-radio slot="start" value="DINHEIRO"></ion-radio>
+          </ion-item> 
+          <ion-item>
+            <ion-label>Cartão de Crédito</ion-label>
+            <ion-radio slot="start" value="CARTAO_CREDITO"></ion-radio>
+          </ion-item> 
+          <ion-item>
+            <ion-label>Cartão de Débito</ion-label>
+            <ion-radio slot="start" value="CARTAO_DEBITO"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Outro</ion-label>
+            <ion-radio slot="start" value="OUTROS"></ion-radio>
+          </ion-item>
+        </ion-list> 
+      </ion-item>  -->
+    </ion-card-content>
+
+    <ion-item class=btnSalvar>
+        <ion-button shape="round" (click)="save()">SALVAR PEDIDO</ion-button>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

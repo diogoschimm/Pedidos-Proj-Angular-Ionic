@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar> 
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Pedido # {{pedido.id}} 
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="h1">Detalhe do Pedido</ion-label>
+        
+        <ion-item class=btnSalvar>
+          <ion-button class="home" shape="round" (click)="home()">LISTA</ion-button>
+          <ion-button class="editar" shape="round" (click)="editarPedido()">EDITAR</ion-button>
+          <ion-button class="deletar" shape="round" (click)="excluirPedido()">EXCLUIR</ion-button>
+        </ion-item> 
+
+        <ion-item>
+          <ion-label>ID Pedido: <strong>#{{pedido.id}}</strong></ion-label> 
+        </ion-item>  
+
+        <ion-item>
+          <ion-label>Data do Pedido: {{pedido.dataPedido | date: 'dd/MM/yyyy'}}</ion-label> 
+        </ion-item> 
+
+        <ion-item>
+          <ion-label>Hora do Pedido: {{pedido.hora}}</ion-label> 
+        </ion-item>  
+
+        <ion-item>
+          <ion-label class="label">Cliente: {{pedido.cliente.nome}} </ion-label> 
+        </ion-item> 
+
+        <ion-item>
+          <ion-label class="label">Valor Total: {{pedido.valor}} </ion-label> 
+        </ion-item>  
+
+        <ion-item> 
+           <p><strong>Itens:</strong> {{pedido.itens}} </p> 
+        </ion-item>     
+        
+      </ion-card-content>
+      </ion-card>
+     
+  </ion-content>
+  
